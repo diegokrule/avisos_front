@@ -1,0 +1,14 @@
+<select [(ngModel)]="family" (change)="level0Changed($event)" >
+  <option *ngFor="let family of families" value={{family.id}}>
+    {{family.descripcion}}
+  </option>
+</select>
+
+
+<div *ngIf="level1Nodes">
+  <select >
+    <option *ngFor="let node of level1Nodes" value={{node.codigo}}>
+      {{node.descripcion}}
+    </option>
+  </select>
+</div>
